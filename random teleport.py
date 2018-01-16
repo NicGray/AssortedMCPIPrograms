@@ -10,4 +10,4 @@ mc = Minecraft.create() # add server ip
 players = mc.getPlayerEntityIds()
 
 for i in players:
-    mc.player.setPos(i,randint(0,200),randint(0,200),randint(0,200))
+    mc.entity.setPos(i,randint(0,200),randint(0,200),randint(0,200))

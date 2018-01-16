@@ -28,7 +28,7 @@ for i in players:
     mc.setBlock(x,y,counter, block.TORCH)
     
     
-    mc.player.setPos(i,x,y,counter)
+    mc.entity.setPos(i,x,y,counter)
 
     counter =+ 20
 

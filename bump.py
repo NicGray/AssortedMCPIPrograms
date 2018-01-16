@@ -12,5 +12,5 @@ while True:
     players = mc.getPlayerEntityIds()
 
     for i in players:
-        mc.player.setPos(i,i.x+2,i.y+1,i.z+1)
+        mc.entity.setPos(i,i.x+2,i.y+1,i.z+1)
     pause(5)
