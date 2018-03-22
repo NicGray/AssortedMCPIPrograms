@@ -27,8 +27,12 @@ for i in players:
     # torch
     mc.setBlock(x,y,counter, block.TORCH)
     
+
     time.sleep(1)
     mc.postToChat("lol")
+
+    
+
     mc.entity.setPos(i,x,y,counter)
 
     counter =+ 20
