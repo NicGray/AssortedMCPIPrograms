@@ -1,7 +1,7 @@
 from mcpi.minecraft import Minecraft
 import mcpi.block as block
-mc = Minecraft.create() # add server ip
-
+mc = Minecraft.create("192.168.1.3") # add server ip
+import time
 players = mc.getPlayerEntityIds()
 counter = -500
 x = 200
@@ -27,8 +27,9 @@ for i in players:
     # torch
     mc.setBlock(x,y,counter, block.TORCH)
     
-    
-    mc.player.setPos(i,x,y,counter)
+    time.sleep(1)
+    mc.postToChat("lol")
+    mc.entity.setPos(i,x,y,counter)
 
     counter =+ 20
 

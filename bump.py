@@ -1,6 +1,7 @@
 from mcpi.minecraft import Minecraft
-import random
-mc = Minecraft.create() # add server ip
+
+import time
+mc = Minecraft.create("192.168.1.24") # add server ip
 
 
 
@@ -10,7 +11,10 @@ mc = Minecraft.create() # add server ip
 while True:
     
     players = mc.getPlayerEntityIds()
-
+    
     for i in players:
-        mc.player.setPos(i,i.x+2,i.y+1,i.z+1)
-    pause(5)
+        print(i)
+        p = mc.entity.getPos(i)
+        mc.entity.setPos(i,p.x+2,p.y+2,p.z+1)
+    mc.postToChat("bumped")
+    time.sleep(10)
